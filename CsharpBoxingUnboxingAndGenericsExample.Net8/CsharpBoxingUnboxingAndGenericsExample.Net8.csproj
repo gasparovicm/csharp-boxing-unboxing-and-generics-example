@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>CsharpBoxingUnboxingAndGenericsExample</RootNamespace>
+    <AssemblyName>CsharpBoxingUnboxingAndGenericsExample.Net8</AssemblyName>
+    <AssemblyTitle>CsharpBoxingUnboxingAndGenericsExample (.NET 8)</AssemblyTitle>
+    <Product>CsharpBoxingUnboxingAndGenericsExample (.NET 8)</Product>
+    <Copyright>Copyright © 2016</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+</Project>
