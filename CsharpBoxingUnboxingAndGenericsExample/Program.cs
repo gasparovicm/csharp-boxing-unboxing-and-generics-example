@@ -7,6 +7,7 @@ namespace CsharpBoxingUnboxingAndGenericsExample
     {
         static void Main(string[] args)
         {
+            Trace.Listeners.Add(new ConsoleTraceListener());
             objectAndLongComparison();
             objectAndClassComparison();
         }
