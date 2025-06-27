@@ -44,3 +44,42 @@ Both versions run the same performance tests comparing:
    - Dynamic typing
 
 The program outputs timing information showing how different approaches to object handling affect performance.
+
+## Example Results for .NET 8
+
+### 1. Object and Long Comparison
+
+#### 1.1 Long Counter
+- Cycle for `int.MaxValue`
+- `longCounter = longCounter + 1;`
+- **Time:** `00:00:00.5092826`
+
+#### 1.2 Object Cast to Long
+- `objectCounter = ((long)objectCounter) + 1;`
+- **Time:** `00:00:06.2129234`
+
+#### 1.3 Results
+- `00:00:00.5092826` vs `00:00:06.2129234`
+> **Conclusion:**  
+  _The first method is **12.2 times faster** than the second._
+
+### 2. Object, Cast, and Dynamic Object
+
+- Cycle for `int.MaxValue`
+
+#### 2.1 Direct Property
+- `myClass.MyProperty1 = i;`
+
+#### 2.2 Instance - Cast, Then Property
+- `((Class1)myObject).MyProperty1 = i;`
+
+#### 2.3 Dynamic Object, Property
+- `myDynamic.MyProperty1 = i;`
+
+#### 2.4 Results
+- Direct property: `00:00:00.4678579`
+- Cast then property: `00:00:00.5564897`
+- Dynamic property: `00:00:07.3568084`
+
+> **Conclusion:**  
+> Using `dynamic` is significantly slower. Please use `dynamic` only when truly needed.
